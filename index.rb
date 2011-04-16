@@ -6,7 +6,11 @@ get '/' do
   @output = Twilio::Response.new
   
   incoming = params[:Body].nil? ?  " Nothing" : params[:Body].to_s
-  @sms= Twilio::Sms.new("Hey! You just said: "+ incoming)
+  
+  if incoming.include? "#sexy"
+    @sms = Twilio::Sms.new("You are one sexy mofo")
+  else
+    @sms= Twilio::Sms.new("Hey! You're not a sexy mofo. You said: "+ incoming)
   
   @output.append(@sms)
   content_type "text/xml"
