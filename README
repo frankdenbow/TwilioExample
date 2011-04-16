@@ -1,0 +1,8 @@
+-= Twilio SMS Example =-
+
+This is a simple Sinatra app that lets you learn the basics of 
+creating a SMS application using Twilio.
+
+For more information on what is possible with the Twilio API go to http://www.twilio.com/docs/
+
+Find me on twitter if you have questions @FrankDenbow
