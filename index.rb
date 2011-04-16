@@ -13,9 +13,9 @@ get '/' do
   incoming = params[:Body].nil? ?  " Nothing" : params[:Body].to_s
   
   if incoming.include? "#sexy"
-    @sms = Twilio::Sms.new("You are one sexy mofo" + "Count(" + session['counter']+ ")")
+    @sms = Twilio::Sms.new("You are one sexy mofo" + " Count(" + session['counter'].to_s  + ")")
   else
-    @sms= Twilio::Sms.new("Hey! You're not a sexy mofo. You said: "+ incoming + "Count(" + session['counter']+ ")")
+    @sms= Twilio::Sms.new("Hey! You're not a sexy mofo. You said: "+ incoming + " Count(" + session['counter'].to_s + ")")
   end
   
   @output.append(@sms)
