@@ -4,6 +4,10 @@ require "twiliolib"
 
 enable :sessions
 
+# Generates Twiml for your app. After you push this code to your webserver, take the link and put it in your 
+# Twilio dashboard under the phone number you want to use. You specify a SMS url. This is hosted at http://twiliosms.heroku.com
+# If there are any questions, find me on twitter @FrankDenbow . Peace!
+
 get '/' do
   
   # You can use sessions to keep track of how many times someone has texted the number
