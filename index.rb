@@ -11,6 +11,7 @@ get '/' do
     @sms = Twilio::Sms.new("You are one sexy mofo")
   else
     @sms= Twilio::Sms.new("Hey! You're not a sexy mofo. You said: "+ incoming)
+  end
   
   @output.append(@sms)
   content_type "text/xml"
